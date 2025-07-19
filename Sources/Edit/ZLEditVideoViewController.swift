@@ -599,7 +599,7 @@ class ZLEditVideoFrameImageBorderView: UIView {
     }
 }
 
-class ZLEditVideoFrameImageCell: UICollectionViewCell {
+public class ZLEditVideoFrameImageCell: UICollectionViewCell {
     lazy var imageView: UIImageView = {
         let view = UIImageView()
         view.contentMode = .scaleAspectFill
@@ -614,13 +614,20 @@ class ZLEditVideoFrameImageCell: UICollectionViewCell {
     }
     
     @available(*, unavailable)
-    required init?(coder: NSCoder) {
+    required public init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func layoutSubviews() {
+    open override func layoutSubviews() {
         super.layoutSubviews()
         imageView.frame = bounds
+    }
+    open func identifier()->String{
+        return ZLEditVideoFrameImageCell.zl.identifier;
+    }
+    
+    open func setImage(_ img:UIImage){
+        self.imageView.image = img
     }
 }
 

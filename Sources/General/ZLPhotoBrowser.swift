@@ -42,7 +42,7 @@ public protocol ZLPhotoBrowserCompatible: AnyObject { }
 
 public protocol ZLPhotoBrowserCompatibleValue { }
 
-extension ZLPhotoBrowserCompatible {
+ extension ZLPhotoBrowserCompatible {
     public var zl: ZLPhotoBrowserWrapper<Self> {
         get { ZLPhotoBrowserWrapper(self) }
         set { }
