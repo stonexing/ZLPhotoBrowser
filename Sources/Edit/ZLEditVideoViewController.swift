@@ -77,6 +77,7 @@ public class ZLEditVideoViewController: UIViewController {
         view.dataSource = self
         view.showsHorizontalScrollIndicator = false
         ZLEditVideoFrameImageCell.zl.register(view)
+        ZLEditVideoFrameImageCell.zl.identifier;
         return view
     }()
     
