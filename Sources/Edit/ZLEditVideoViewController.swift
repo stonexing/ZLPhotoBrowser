@@ -623,7 +623,7 @@ public class ZLEditVideoFrameImageCell: UICollectionViewCell {
         super.layoutSubviews()
         imageView.frame = bounds
     }
-    open func identifier()->String{
+    public static func identifier()->String{
         return ZLEditVideoFrameImageCell.zl.identifier;
     }
     
