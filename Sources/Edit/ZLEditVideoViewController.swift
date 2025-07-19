@@ -629,7 +629,7 @@ public class ZLEditVideoFrameImageCell: UICollectionViewCell {
         return ZLEditVideoFrameImageCell.zl.register(collectionView);
     }
     
-    open func setImage(_ img:UIImage){
+    open func setImage(_ img:UIImage?){
         self.imageView.image = img
     }
 }
