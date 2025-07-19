@@ -26,7 +26,7 @@
 
 import UIKit
 
-extension ZLPhotoBrowserWrapper where Base: UICollectionViewCell {
+public extension ZLPhotoBrowserWrapper where Base: UICollectionViewCell {
     public static var identifier: String {
         NSStringFromClass(Base.self)
     }
@@ -36,12 +36,12 @@ extension ZLPhotoBrowserWrapper where Base: UICollectionViewCell {
     }
 }
 
-extension ZLPhotoBrowserWrapper where Base: UITableViewCell {
-    static var identifier: String {
+public extension ZLPhotoBrowserWrapper where Base: UITableViewCell {
+    public static var identifier: String {
         NSStringFromClass(Base.self)
     }
     
-    static func register(_ tableView: UITableView) {
+    public static func register(_ tableView: UITableView) {
         tableView.register(Base.self, forCellReuseIdentifier: identifier)
     }
 }

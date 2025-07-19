@@ -29,7 +29,7 @@ import Photos
 import AVFoundation
 
 public class ZLEditVideoViewController: UIViewController {
-    private static let frameImageSize = CGSize(width: CGFloat(round(50.0 * 2.0 / 3.0)), height: 50.0)
+    public static let frameImageSize = CGSize(width: CGFloat(round(50.0 * 2.0 / 3.0)), height: 50.0)
     
     private let avAsset: AVAsset
     
@@ -77,7 +77,6 @@ public class ZLEditVideoViewController: UIViewController {
         view.dataSource = self
         view.showsHorizontalScrollIndicator = false
         ZLEditVideoFrameImageCell.zl.register(view)
-        ZLEditVideoFrameImageCell.zl.identifier;
         return view
     }()
     
@@ -625,6 +624,9 @@ public class ZLEditVideoFrameImageCell: UICollectionViewCell {
     }
     public static func identifier()->String{
         return ZLEditVideoFrameImageCell.zl.identifier;
+    }
+    public static func register(_ collectionView: UICollectionView){
+        return ZLEditVideoFrameImageCell.zl.register(collectionView);
     }
     
     open func setImage(_ img:UIImage){
